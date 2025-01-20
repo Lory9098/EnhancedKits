@@ -1,0 +1,4 @@
+name: Enhancedkits
+version: '${project.version}'
+main: me.nettychannell.enhancedkits.Enhancedkits
+authors: [ NettyChannell ]

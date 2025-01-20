@@ -1,0 +1,23 @@
+command:
+  default: message # or gui
+
+kits-message:
+  - "&bKits available &a%ek_availablekits%, &c%ek_unavailablekits%" #papi support here!
+
+cooldowns:
+  permissionbased:
+    gladiator:
+      hello.cooldown: 3600 # in seconds
+      hello2.cooldown: 3000 # in seconds
+      default: 10 # without this, you're gonna have problems bud
+  global:
+    gladiator: 3600 # in seconds
+
+kits:
+  gladiator:
+    permission:
+      enabled: true
+      value: "enancedkits.kits.gladiator"
+    cooldown: "permissionbased" # or global
+    showInGui: true
+    items:
