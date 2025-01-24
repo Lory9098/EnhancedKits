@@ -1,10 +1,10 @@
 package me.nettychannell.enhancedkits.service;
 
 import me.nettychannell.enhancedkits.kit.Kit;
-import me.nettychannell.enhancedkits.utils.cooldown.Cooldown;
-import me.nettychannell.enhancedkits.utils.cooldown.impl.GlobalCooldown;
-import me.nettychannell.enhancedkits.utils.cooldown.impl.PermissionBasedCooldown;
-import me.nettychannell.enhancedkits.utils.cooldown.type.CooldownType;
+import me.nettychannell.enhancedkits.cooldown.Cooldown;
+import me.nettychannell.enhancedkits.cooldown.impl.GlobalCooldown;
+import me.nettychannell.enhancedkits.cooldown.impl.PermissionBasedCooldown;
+import me.nettychannell.enhancedkits.cooldown.type.CooldownType;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.HashMap;

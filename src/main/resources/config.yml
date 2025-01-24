@@ -1,3 +1,12 @@
+kit-item-behavior-default: OVERRIDE
+
+messages:
+  kit-not-found: "&cThe kit &7%kit%&c don't exists!"
+  no-permission: "&cYou don't have the permission to use &7%kit%"
+  kit-given: "&bYou have received &7%kit%&b!"
+  kit-saved: "&bYou have saved &7%kit%%b!"
+  cooldown: "&bYou still have to wait a bit to get &7%kit%&b!"
+
 command:
   default: message # or gui
 

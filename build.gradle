@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'me.nettychannell'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "spigotmc-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        name = 'aikar'
+        url = 'https://repo.aikar.co/content/groups/aikar/'
+    }
+    maven {
+        name = 'placeholderapi'
+        url = 'https://repo.xetendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    implementation 'co.aikar:acf-paper:0.5.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+
+    implementation(files('libs/loadit.jar'))
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    configurations = [project.configurations.runtimeClasspath]
+}
+
+tasks.build {
+    dependsOn shadowJar
+}

@@ -1,7 +1,8 @@
 package me.nettychannell.enhancedkits.kit;
 
 import lombok.Getter;
-import me.nettychannell.enhancedkits.utils.cooldown.type.CooldownType;
+import me.nettychannell.enhancedkits.cooldown.type.CooldownType;
+import me.nettychannell.enhancedkits.kit.item.KitItem;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
@@ -11,9 +12,9 @@ public class Kit {
     private final String name, permission;
     private final CooldownType coolDownType;
     private final boolean showInGui;
-    private final HashMap<Integer, ItemStack> items;
+    private final HashMap<Integer, KitItem> items;
 
-    public Kit(String name, String permission, CooldownType coolDownType, boolean showInGui, HashMap<Integer, ItemStack> items) {
+    public Kit(String name, String permission, CooldownType coolDownType, boolean showInGui, HashMap<Integer, KitItem> items) {
         this.name = name;
         this.permission = permission;
         this.coolDownType = coolDownType;
